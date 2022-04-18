@@ -1,0 +1,27 @@
+<div class="modal__form baseForm">
+    <form class="baseForm__fields" [formGroup]="formGroup">
+        <ng-container *ngFor="let data of formGroupData; let i = index">
+            <label class="baseForm__field c-field c-field--column" [class.baseForm__field--fill]="data.tag === 'textarea'">
+                <span class="c-field__title">{{ data.label }}</span>
+                <input
+                    *ngIf="data.tag === 'input'"
+                    class="c-field__input" 
+                    [class.error]="isControlInvalid(data.formField)" 
+                    [type]="data.type"
+                    [placeholder]="data.placeholder"
+                    [formControlName]="data.name"
+                    [name]="data.name"/>
+                <textarea 
+                    *ngIf="data.tag === 'textarea'"
+                    class="c-field__input c-field__input--textarea"
+                    [class.error]="isControlInvalid(data.formField)"
+                    [placeholder]="data.placeholder"
+                    [formControlName]="data.name"
+                    [name]="data.name"
+                    rows="4"
+                ></textarea>
+                <span class="c-field__error" *ngIf="isControlInvalid(data.formField)">{{ data.errorMsg }}</span>
+            </label>
+        </ng-container>
+    </form>
+</div>

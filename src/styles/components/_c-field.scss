@@ -1,0 +1,155 @@
+
+.c-field {
+    --iconSize: 1.5rem;
+    --inputPaddingX: 16px;
+    --inputPaddingY: 13px;
+    
+    $color_hover: $color_grey_lead;
+    $color_main: $color_dark;
+    --border-color: #{$color_grey_light};
+
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+
+    &--column {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .c-field__title {
+            margin-bottom: 4px;
+        }
+    }
+
+    @media ($media_sm) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .c-field__title {
+            margin-bottom: 4px;
+        }
+    }
+
+    // .c-field__title
+
+    &__title {
+        color: $color_dark;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    // .c-field__error
+
+    &__error {
+        color: $color_red;
+        font-size: 12px;
+        line-height: 16px;
+        margin-top: 4px;
+        display: inline-block;
+    }
+
+    // .c-field__area
+
+    &__area {
+        display: inline-flex;
+        position: relative;
+
+        &[data-passwordSwitcher] {
+            @include cursorPointer;
+        }
+
+        // .c-field__area--icon
+
+        &--icon {
+            .c-field__input {
+                padding-right: calc(var(--inputPaddingX) + var(--iconSize) + 0.4rem);
+
+                &:focus {
+                    ~ .c-field__icon {
+                        fill: $color_main;
+                    }
+                }
+            }
+
+            &:hover {
+                .c-field__input {
+                    --border-color: #{$color_hover};
+                }
+
+                .c-field__icon {
+                    fill: $color_hover;
+                }
+            }
+        }
+    }
+
+    // .c-field__input
+
+    &__input {
+        display: inline-flex;
+        border: 1px solid var(--border-color);
+        outline: none;
+        border-radius: 4px;
+        padding: var(--inputPaddingY) var(--inputPaddingX);
+        //box-shadow: 0 0 0 1px var(--border-color) inset;
+        width: 100%;
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color_dark_body_text;
+        @include baseTransition;
+
+        &.error {
+            border-color: $color_red;
+        }
+
+        &--textarea {
+            resize: none;
+            height: auto;
+            padding: var(--inputPaddingX);
+            width: 100%;
+        }
+
+        &::placeholder {
+            color: $color_grey_head;
+        }
+
+        &:hover {
+            --border-color: #{$color_hover};
+        }
+
+        &:focus {
+            --border-color: #{$color_main};
+        }
+
+        &:disabled {
+            background-color: $color_grey_extra_light;
+            pointer-events: none;
+
+            &:hover {
+                --border-color: #{$color_grey_light};
+            }
+        }
+    }
+
+    // .c-field__icon
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: var(--inputPaddingX);
+        transition: 0.3s ease-in-out;
+
+        fill: var(--border-color);
+
+        width: var(--iconSize);
+        height: var(--iconSize);
+
+        &--min {
+            width: calc(var(--iconSize) / 1.3);
+            height: calc(var(--iconSize) / 1.3);
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<div class="filterPage">
+    <div class="filterPage__filter">
+        <div class="filterPage__filterBox">
+            <filter-box [filterData]="filterData"></filter-box>
+            <div class="filterPage__btn">
+                <button class="btn btn--secondary">Задать вопрос</button>
+            </div>
+        </div>
+    </div>
+    <div class="filterPage__content">
+        <ng-container *ngFor="let data of accordionData; let i = index;">
+            <app-accordion class="filterPage__card" [accordionData]="data" *ngIf="isRenderCard(filterData, data.filterId)"></app-accordion>
+        </ng-container>
+    </div>
+</div>

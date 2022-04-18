@@ -1,0 +1,135 @@
+<section class="section section--underHeader promo">
+    <div class="section__inner promo__inner">
+        <h1 class="baseTitle baseTitle--promo">
+            <span class="baseTitle__top" data-animation="fadeInRight" #dataAnim>Российские</span>
+            <br>
+            <span class="baseTitle__bottom delay-1s" data-animation="fadeInRight" #dataAnim>корпоративные ИТ-решения</span>
+        </h1>
+    </div>
+</section>
+
+<section class="section features">
+    <div class="section__inner">
+        <div class="features__cards">
+            <app-features [cardsData]="homeFeaturesCardData"></app-features>
+        </div>
+    </div>
+</section>
+
+<section class="section simpleTextSection">
+    <div class="section__inner">
+        <div class="section__header">
+            <h3 class="baseTitle baseTitle--third">
+                <span data-animation="fadeInRight" #dataAnim>Команда профессионалов</span>
+            </h3>
+        </div>
+        <div class="section__body simpleTextSection__body">
+            <p class="simpleTextSection__text">
+                Компания «Формула Би Ай» была создана в 2006 году и объединила менеджеров и разработчиков ИТ-систем. 
+                Более 15 лет мы занимаемся созданием сложных корпоративных информационных систем и цифровых платформ.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section keyPoints">
+    <div class="section__inner">
+        <div class="section__header">
+            <h3 class="baseTitle baseTitle--third">
+                <span data-animation="fadeInRight" #dataAnim>Ключевые клиенты</span>
+            </h3>
+        </div>
+        <div class="section__body">
+            <div class="keyPoints__slider">
+                <swiper [slidesPerView]="4" [navigation]="true">
+                    <ng-template swiperSlide *ngFor="let cardData of keyPointsCardDataHalf;">
+                        <div class="keyPoints__group">
+                            <div class="swiper-cover" *ngFor="let src of cardData;">
+                                <div class="baseCard baseCard--keyPoint">
+                                    <div class="baseCard__content">
+                                        <img class="imgMax" [src]="src" alt="Изображение слайда">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </swiper>
+            </div>
+            <div class="keyPoints__btn">
+                <a href="#" class="btn btn--primary">Подробно о проектах</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section partners">
+    <div class="section__inner">
+        <div class="section__header">
+            <h3 class="baseTitle baseTitle--third">
+                <span data-animation="fadeInRight" #dataAnim>Партнёры</span>
+            </h3>
+        </div>
+        <div class="section__body">
+            <div class="partners__cards">
+                <div class="partners__card baseCard baseCard--partners baseCard--inverseRed" *ngFor="let cardData of partnersCardData;">
+                    <div class="baseCard__content">
+                        <div class="baseCard__imgArea">
+                            <img [src]="cardData.img" alt="Изображение партнёра">
+                            <img [src]="cardData.imgHover" alt="Изображение партнёра">
+                        </div>
+                        <div class="baseCard__infoArea">
+                            <h3 class="baseCard__title">{{ cardData.title }}</h3>
+                            <p class="baseCard__text" [innerHTML]="cardData.text"></p>
+                            <a class="baseCard__link link" [href]="cardData.link">
+                                <span class="link__text">Перейти на сайт</span>
+                                <svg class="link__icon link__icon--right">
+                                    <use xlink:href="./assets/sprites/sprite.svg#link"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section newsEvent">
+    <div class="section__inner">
+        <div class="section__header">
+            <h3 class="baseTitle baseTitle--third">
+                <span data-animation="fadeInRight" #dataAnim>Новости и мероприятия</span>
+            </h3>
+        </div>
+        <div class="section__body newsEvent__body">
+            <div class="newsEvent__cards newsCards">
+                <div class="newsCards__card baseCard baseCard--news baseCard--inverseRed">
+                    <div class="baseCard__content">
+                        <h3 class="baseCard__title">27 января 2022 г. состоялась Мастер-сессия компании Шерп Софт</h3>
+                        <p class="baseCard__text">
+                            Главной целью мероприятия было познакомить партнеров и клиентов, использующих 
+                            технологическую платформу Шерп, с новыми возможностями платформы, реализованными за 2 года
+                        </p>
+                    </div>
+                </div>
+
+                <div class="newsCards__card baseCard baseCard--news baseCard--inverseRed">
+                    <div class="baseCard__content">
+                        <h3 class="baseCard__title">27 января 2022 г. состоялась Мастер-сессия компании Шерп Софт</h3>
+                        <p class="baseCard__img">
+                            <img class="imgMax" src="./assets/img/master-session.png" alt="Мастер-сессия">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a class="newsEvent__btn" href="#">
+                <span class="newsEvent__btnText">Все новости</span>
+                <div class="newsEvent__btnArrow">
+                    <svg>
+                        <use xlink:href="./assets/sprites/sprite.svg#arrow-right"></use>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>

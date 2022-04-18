@@ -1,0 +1,80 @@
+// === Footer [ Стили для футера, используемые на всех страницах ] ===
+
+app-footer {
+    margin-top: auto;
+}
+
+.footer {
+    background-color: $color_white;
+
+    // .footer__content
+
+    &__content {
+        padding: 36px 0 48px 0;
+        display: flex;
+    }
+
+    // .footer__info
+
+    &__info {
+        flex-basis: 50%;
+    }
+
+    // .footer__logo
+
+    &__logo {
+
+    }
+
+    // .footer__more
+
+    &__more {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .footer__link
+
+    &__link {
+        @include baseTransition;
+        font-weight: 600;
+        text-decoration: none;
+        color: $color_dark_body_text;
+
+        &:hover {
+            color: $color_red;
+        }
+
+        // .footer__link--number
+
+        &--number {
+            font-size: 18px;
+            margin: 24px 0 42px 0;
+        }
+    }
+
+    // .footer__address
+
+    &__address {
+        line-height: 1.6;
+    }
+
+    // .footer__links
+
+    &__links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 175px;
+
+        align-content: flex-start;
+        margin-top: 55px;
+    }
+
+    // .footer__mapLink
+
+    &__mapLink {
+        margin: 18px 0 48px 0;
+    }
+}
+
+// === / Footer ===

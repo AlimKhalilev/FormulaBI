@@ -1,0 +1,39 @@
+<section class="section section--underHeader media">
+    <div class="section__inner media__inner">
+        <div class="media__header">
+            <h1 class="baseTitle baseTitle--first">
+                <span data-animation="fadeInRight" #dataAnim>Медиа</span>
+            </h1>
+        </div>
+        <div class="media__body">
+            <div class="media__tabs">
+                <div class="mediaTabs">
+                    <label class="mediaTabs__tab" *ngFor="let tabData of mediaTabsData; let i = index;">
+                        <input class="mediaTabs__input visually-hidden" (change)="changeRadio($event)" [(ngModel)]="activeTabId" [value]="i+1" type="radio" name="mediaTabs">
+                        <span class="mediaTabs__title">{{ tabData }}</span>
+                    </label>
+                </div>
+            </div>
+            <div class="media__content">
+                <ng-container *ngIf="activeTabId === mediaTabsPageId.NEWS">
+                    <media-news></media-news>
+                </ng-container>
+                <ng-container *ngIf="activeTabId === mediaTabsPageId.EVENTS">
+                    <media-events></media-events>
+                </ng-container>
+                <ng-container *ngIf="activeTabId === mediaTabsPageId.QUESTIONS">
+                    <media-questions></media-questions>
+                </ng-container>
+                <ng-container *ngIf="activeTabId === mediaTabsPageId.ARTICLES">
+                    <media-articles></media-articles>
+                </ng-container>
+                <ng-container *ngIf="activeTabId === mediaTabsPageId.GALLERY">
+                    <media-gallery></media-gallery>
+                </ng-container>
+                <ng-container *ngIf="activeTabId === mediaTabsPageId.LIBRARY">
+                    <media-library></media-library>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</section>

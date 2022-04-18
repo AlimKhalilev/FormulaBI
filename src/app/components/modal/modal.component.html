@@ -1,0 +1,17 @@
+<div class="modal modal--short" [attr.name]="modalService.modalNames.TECH_SUPPORT" #modalRef>
+    <modal-tech-support></modal-tech-support>
+</div>
+
+<div class="modal modal--short" [attr.name]="modalService.modalNames.PASSWORD_RESTORE" #modalRef>
+    <modal-password-restore></modal-password-restore>
+</div>
+
+<div class="modal" [attr.name]="modalService.modalNames.WRITE_MESSAGE" #modalRef>
+    <modal-write-message></modal-write-message>
+</div>
+
+<div class="modal" [attr.name]="modalService.modalNames.SUCCESS" #modalRef>
+    <modal-success></modal-success>
+</div>
+
+<div class="overlay overlay--modal" (click)="modalService.close()" #overlayRef></div>

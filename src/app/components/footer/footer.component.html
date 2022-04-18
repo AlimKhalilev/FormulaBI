@@ -1,0 +1,30 @@
+<footer class="section footer">
+    <div class="section__inner">
+        <div class="footer__content">
+            <div class="footer__info">
+                <a class="footer__logo" [routerLink]="['/home']" routerDirection="root">
+                    <img src="./assets/img/logo-footer.svg" alt="Логотип">
+                </a>
+                <div class="footer__more">
+                    <a class="footer__link footer__link--number" href="tel: +7 (495) 452-12-46">+7 (495) 452-12-46</a>
+                    <span class="footer__address">123290, г. Москва, 1-й Магистральный тупик, <br>д.11, стр.1, 4 эт. / БЦ «The Yard»</span>
+                    <a class="footer__mapLink link" href="#letsgo">
+                        <span class="link__text">Карта</span>
+                        <svg class="link__icon link__icon--right">
+                            <use xlink:href="./assets/sprites/sprite.svg#link"></use>
+                        </svg>
+                    </a>
+                    <a class="footer__link" href="#">Правовая информация</a>
+                </div>
+            </div>
+            <div class="footer__links">
+                <a class="footer__link" href="#" [routerLink]="['/solutions']" routerDirection="root">Решения</a>
+                <a class="footer__link" href="#" [routerLink]="['/about']" routerDirection="root">О компании</a>
+                <a class="footer__link" href="#" [routerLink]="['/demo']" routerDirection="root">Центры знаний</a>
+                <a class="footer__link" href="#" [routerLink]="['/demo']" routerDirection="root">Клиентам</a>
+                <a class="footer__link" href="#" [routerLink]="['/demo']" routerDirection="root">Технологии</a>
+                <a class="footer__link" href="#" [routerLink]="['media', appService.mediaPageId]" routerDirection="root">Медиа</a>
+            </div>
+        </div>
+    </div>
+</footer>

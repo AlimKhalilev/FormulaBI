@@ -1,0 +1,78 @@
+app-accordion {
+    width: 100%;
+}
+
+.accordion {
+    border-radius: 4px;
+    background-color: $color_white;
+    box-shadow: $shadow_gray;
+
+    // .accordion.open
+
+    &.open {
+        .accordion__toggle {
+            svg {
+                transform: rotate(180deg);
+                fill: $color_grey_header_menu;
+            }
+        }
+
+        .accordion__body {
+            height: var(--height);
+        }
+    }
+
+    // .accordion__content
+
+    &__content {
+        padding: 36px 40px;
+    }
+
+    // .accordion__header
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        @include cursorPointer;
+    }
+
+    // .accordion__title
+
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        color: $color_grey_lead;
+        line-height: 1.6;
+    }
+
+    // .accordion__toggle
+
+    &__toggle {
+        margin-left: 40px;
+        display: flex;
+
+        svg {
+            fill: $color_grey_light;
+            width: 32px;
+            height: 32px;
+            @include baseTransition;
+        }
+    }
+
+    // .accordion__body
+
+    &__body {
+        line-height: 1.6;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        overflow: hidden;
+
+        &.init {
+            height: 0px;
+            @include baseTransition;
+        }
+    }
+}

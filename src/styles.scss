@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "./styles/lib/normalize";
+@import "./styles/lib/colors";
+@import "./styles/lib/grid";
+@import "./styles/lib/swiper";
+@import "./styles/animations/animate";
+@import "./styles/lib/mixins";
+@import "./styles/lib/burger";
+@import "./styles/lib/components";
+
+/* СТИЛИ КОМПОНЕНТОВ (первая буква c- означает custom) */
+
+@import "./styles/components/btn";
+@import "./styles/components/link";
+@import "./styles/components/c-checkbox";
+@import "./styles/components/c-field";
+@import "./styles/components/c-select";
+@import "./styles/components/c-details";
+@import "./styles/components/с-dropdown";
+@import "./styles/components/contentSelect";
+@import "./styles/components/c-accordion";
+@import "./styles/components/c-filterBox";
+@import "./styles/components/c-filterTab";
+
+@import "./styles/gridDemo";
+@import "./styles/modal";
+@import "./styles/header";
+@import "./styles/footer";
+@import "./styles/main";

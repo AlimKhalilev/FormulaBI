@@ -1,0 +1,12 @@
+<div class="filterPage">
+    <div class="filterPage__filter">
+        <div class="filterPage__filterBox">
+            <filter-box [filterData]="filterData"></filter-box>
+        </div>
+    </div>
+    <div class="filterPage__content">
+        <ng-container *ngFor="let data of cardData; let i = index;">
+            <articles-card class="filterPage__card filterPage__card--articles" [cardData]="data" *ngIf="isRenderCard(filterData, data.filterId)"></articles-card>
+        </ng-container>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="filterBox">
+    <div class="filterBox__content">
+        <div class="filterBox__header">
+            <h3 class="filterBox__title">Фильтры</h3>
+            <button class="filterBox__reset" (click)="resetFilterForm()">Сбросить</button>
+        </div>
+        <ul class="filterBox__list">
+            <li class="filterBox__item" *ngFor="let data of filterData; let i = index;">
+                <label class="input-group__elem c-checkbox">
+                    <input class="c-checkbox__input visually-hidden" type="checkbox" [(ngModel)]="data.checked" (change)="changeFilter(i, $event)"/>
+                    <div class="c-checkbox__box">
+                        <svg class="c-checkbox__icon">
+                            <use xlink:href="./assets/sprites/sprite.svg#check"></use>
+                        </svg>
+                    </div>
+                    <span class="c-checkbox__text">{{ data.name }}</span>
+                </label>
+            </li>
+        </ul>
+    </div>
+</div>

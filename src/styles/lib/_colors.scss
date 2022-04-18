@@ -1,0 +1,44 @@
+// [[ Цвета, используемые в проекте. Должны начинаться с $color_ ]]
+
+$color_white: #FFFFFF;
+$color_dark: #123039;
+$color_dark_body_text: #2D5866;
+$color_footer_menu_link: #486266;
+$color_grey_icon: #8293A4;
+$color_grey_lead: #647381;
+$color_grey_head: #8E9BA7;
+$color_grey_header_menu: #6D7781;
+$color_grey_light: #A5ABAA;
+$color_grey_extra_light: #DFE1E1;
+$color_bg_dummy: #edeff2;
+$color_red: #CA0E1A;
+
+$shadow_gray: 0px 16px 40px rgba(72, 98, 102, 0.25);
+$shadow_gray_active: 0px 10px 20px rgba(72, 98, 102, 0.3);
+
+$shadow_gray_slider_card: 10px 10px 25px rgba(72, 98, 102, 0.25);
+
+$shadow_red: 0px 4px 20px rgba(255, 0, 0, 0.2), 0px 16px 40px rgba(72, 98, 102, 0.25);
+$shadow_red_active: 0px 4px 20px rgba(255, 0, 0, 0.2), 0px 10px 20px rgba(72, 98, 102, 0.3);
+
+$shadow_gray_mini: 0px 4px 8px rgba(72, 98, 102, 0.15);
+$shadow_gray_mini_slide_button: 4px 4px 8px rgba(72, 98, 102, 0.15);
+
+
+$color_black_main: #222;
+$color_body_bg: #E5E5E5;
+$color_header: #fff;
+$color_primary: tomato;
+//$color_primary: #3E54D8;
+
+$color_danger: #ED6373;
+$color_warning: #F3B63F;
+$color_success: #199F27;
+$color_info: #8C9BEA;
+$color_secondary: #929398;
+
+$color_burger_show: $color_red;
+$color_burger_close: $color_grey_icon;
+
+$color_slider_dot: #ffa3a3;
+$color_slider_dot_active: #813b3b;

@@ -1,0 +1,28 @@
+<section class="section section--underHeader solutions">
+    <div class="section__inner">
+        <div class="section__header">
+            <h1 class="baseTitle baseTitle--first">
+                <span data-animation="fadeInRight" #dataAnim>Решения</span>
+            </h1>
+        </div>
+        <div class="solutions__body">
+            <div class="solutions__filter">
+                <filter-tab [filterData]="filterData" [model]="accordionModel" (valueChosen)="filterChosen($event)"></filter-tab>
+            </div>
+            <div class="solutions__content">
+                <div class="solutions__cards">
+                    <ng-container *ngFor="let data of accordionData; let i = index;">
+                        <app-accordion class="solutions__accordion" [accordionData]="data" *ngIf="isRenderCard(accordionModel, data.filterModel)"></app-accordion>
+                    </ng-container>
+                </div>
+
+                <div class="solutions__link">
+                    <a class="link" href="#link">
+                        <span class="link__text">Перейти на сайт решения</span>
+                        <svg class="link__icon link__icon--right"><use xlink:href="./assets/sprites/sprite.svg#link"></use></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

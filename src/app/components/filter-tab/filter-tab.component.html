@@ -1,0 +1,15 @@
+<ul class="filterTab">
+    <li class="filterTab__item" *ngFor="let data of filterData; let i = index;">
+        <label class="filterTab__cardCover">
+            <input class="filterTab__input visually-hidden" type="radio" [(ngModel)]="model" value="{{ data.model }}" (ngModelChange)="choose($event)"/>
+            <div class="filterTab__card">
+                <div class="filterTab__iconCover">
+                    <svg class="filterTab__icon">
+                        <use [attr.xlink:href]="'./assets/sprites/sprite.svg#' + data.icon"></use>
+                    </svg>
+                </div>
+                <h4 class="filterTab__title">{{ data.name }}</h4>
+            </div>
+        </label>
+    </li>
+</ul>

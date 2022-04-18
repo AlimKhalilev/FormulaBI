@@ -1,0 +1,261 @@
+// === Mixins [ Шаблоны классов стилей, используемых на всех страницах ]===
+
+// используется для одинаковых отступов внутри секций
+
+:root {
+    --section_indent: 120px;
+    --header-top-height: 35px;
+    --header-bottom-height: 84px;
+    --header-min-height: calc(var(--header-top-height) + var(--header-bottom-height));
+
+    @media ($media_md) {
+        --section_indent: 70px;
+        --header-min-height: var(--header-bottom-height);
+    }
+}
+
+@mixin cursorPointer { // чтобы на смартфонах не было явного выделения элемента
+    
+    @media ($media_not_md) {
+        cursor: pointer;
+    }
+}
+
+@mixin baseTransition {
+    transition: 0.5s ease-in-out;
+}
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.35;
+    font-size: 15px;
+    color: $color_dark_body_text;
+    overflow-y: hidden;
+}
+
+app-home {
+    @media ($media_md) {
+        display: none;
+    }
+}
+
+.videoBg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: $color_bg_dummy;
+}
+
+app-root {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 0px;
+
+    &.hideScroll {
+        overflow: hidden;
+    }
+}
+
+.baseList {
+    li {
+        position: relative;
+        padding-left: 28px;
+        line-height: 1.6;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 12px;
+            width: 12px;
+            background-color: $color_grey_head;
+            top: 8px;
+            left: 0;
+            border-radius: 2px;
+            @include baseTransition;
+
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.modal {
+
+    // .modal__form
+
+    &__form {
+    }
+}
+
+.baseForm {
+
+    // .baseForm__fields
+
+    &__fields {
+        display: grid;
+        gap: 20px;
+    }
+
+    // .baseForm__field
+
+    &__field {
+        width: 100%;
+
+        &--fill {
+            grid-column-end: 3;
+            grid-column-start: 1;
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $color_dark;
+    opacity: 0;
+    visibility: hidden;
+    @include baseTransition;
+    @include cursorPointer;
+
+    &--burger {
+        z-index: 10;
+    }
+
+    &--modal {
+        z-index: 20;
+    }
+
+    &.visible {
+        visibility: visible;
+        opacity: 0.3;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.scroll-block-dummy {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
+    visibility: hidden;
+}
+
+.swiper-cover {
+    padding: 10px 30px 35px 10px;
+    display: flex;
+    height: 100%;
+
+    @media ($media_md) {
+        padding: 0 6px 20px 6px;
+    }
+}
+
+.section {
+    margin-top: var(--section_indent);
+
+    &__header {
+
+    }
+
+    &__title {
+
+    }
+
+    &--underHeader {
+        margin-top: calc(var(--section_indent) + var(--header-min-height));
+    }
+
+    &--beforeFooter {
+        margin-bottom: var(--section_indent);
+    }
+
+    // .section__header
+    &__header {
+
+    }
+
+    // .section__body
+    &__body {
+        margin-top: 48px;
+    }
+}
+
+.blockTitle {
+    font-size: 2.2rem;
+    text-align: center;
+
+    @media ($media_sm) {
+        font-size: 1.8rem;
+    }
+}
+
+.imgMax {
+    max-width: 100%;
+}
+
+#easterEgg {
+    --color: #00a0ff;
+    text-align: center;
+    font-size: 7rem;
+    line-height: 1.6;
+    background-color: transparent;
+    box-shadow: unset;
+    padding: 0;
+    color: $color_white;
+    text-shadow:
+        0 0 7px $color_white,
+        0 0 10px $color_white,
+        0 0 21px $color_white,
+        0 0 42px var(--color),
+        0 0 82px var(--color),
+        0 0 92px var(--color),
+        0 0 102px var(--color),
+        0 0 151px var(--color);
+
+    @media ($media_sm) {
+        font-size: 4rem;
+    }
+
+    &.visible {
+        ~ .overlay.visible {
+            opacity: 0.99;
+        }
+    }
+}
+
+.customScroll {
+    &::-webkit-scrollbar-track {
+        background-color: lighten($color_secondary, 20%);
+    }
+    
+    &::-webkit-scrollbar {
+        width: 4px;
+        background-color: lighten($color_secondary, 20%);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: darken($color_secondary, 10%);
+    }
+}
+
+// === / Mixins ===

@@ -1,0 +1,32 @@
+<ng-container *ngFor="let cardData of cardsData; let rowIndex = index">
+    
+    <div class="features__card" [class]="cardData.rowClass">
+        <h3 class="features__title">{{ cardData.name }}</h3>
+        <div class="features__slider">
+            <swiper [slidesPerView]="4" [navigation]="true">
+                <ng-template *ngFor="let slide of cardData.slideData; let colIndex = index" swiperSlide>
+                    <div class="swiper-cover">
+                        <div class="baseCard baseCard--info" [class.active]="cardData.tabActive && cardData.tabIndex === colIndex" (click)="onTabTogglerClick(rowIndex, colIndex)">
+                            <div class="baseCard__content">
+                                <div class="baseCard__icon" [style]="'color: ' + cardData.fillIcon">
+                                    <svg class="baseCard__iconSvg">
+                                        <use [attr.xlink:href]="'./assets/sprites/sprite.svg#' + slide.icon"></use>
+                                    </svg>
+                                </div>
+                                <h3 class="baseCard__title">{{ slide.name }}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </swiper>
+        </div>
+    </div>
+
+    <div class="features__news" *ngIf="cardData.tabActive">
+        <p class="features__newsContent" [innerHTML]="cardData.tabContent"></p>
+        <div class="features__newsBtn">
+            <a href="#" class="btn btn--outlined">Подробно о решениях</a>
+        </div>
+    </div>
+
+</ng-container>

@@ -1,0 +1,51 @@
+.filterBox {
+    background-color: $color_white;
+    border-radius: 4px;
+
+    // .filterBox__content
+
+    &__content {
+        padding: 36px 40px;
+    }
+
+    // .filterBox__header
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 42px;
+        justify-content: space-between;
+    }
+
+    // .filterBox__title
+
+    &__title {
+        color: $color_dark;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    // .filterBox__reset
+
+    &__reset {
+        color: $color_grey_light;
+        background: unset;
+        border: none;
+        @include cursorPointer;
+        line-height: 1.6;
+        font-weight: 600;
+    }
+
+    // .filterBox__list
+
+    &__list {
+    }
+
+    // .filterBox__item
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 36px;
+        }
+    }
+}

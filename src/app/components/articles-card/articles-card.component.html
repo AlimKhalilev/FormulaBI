@@ -1,0 +1,14 @@
+<div class="baseCard baseCard--articles baseCard--inverseRed">
+    <div class="baseCard__content">
+        <time *ngIf="cardData.date" class="baseCard__underTitle">{{ cardData.date }}</time>
+        <span *ngIf="cardData.category" class="baseCard__underTitle">{{ cardData.category }}</span>
+
+        <h3 class="baseCard__title">{{ cardData.title }}</h3>
+        <a class="baseCard__link link" [href]="cardData.link">
+            <span class="link__text">{{ cardData.linkStr }}</span>
+            <svg class="link__icon link__icon--right">
+                <use xlink:href="./assets/sprites/sprite.svg#link"></use>
+            </svg>
+        </a>
+    </div>
+</div>

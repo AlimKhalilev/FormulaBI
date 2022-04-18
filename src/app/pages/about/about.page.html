@@ -1,0 +1,102 @@
+<section class="section section--underHeader simpleTextSection">
+    <div class="section__inner">
+        <div class="section__header">
+            <h1 class="baseTitle baseTitle--first">
+                <span data-animation="fadeInRight" #dataAnim>О нас</span>
+            </h1>
+        </div>
+        <div class="section__body simpleTextSection__body">
+            <p class="simpleTextSection__text">
+                «Формула Би Ай» - многопрофильная IT-компания,  которая имеет  богатый  опыт внедрения передовых и востребованных IT-технологий. 
+                Наша команда объединила экспертов в области информатизации, экономики, менеджмента  и других отраслей для создания сложных 
+                корпоративных информационных систем, цифровых платформ корпораций и холдингов, независимо от формы собственности, масштаба и отрасли. 
+                В основе реализации наших систем –  запатентованная уникальная технологическая платформа.                 
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section__inner">
+        <div class="aboutBanner">
+            <div class="aboutBanner__content">
+                <div class="aboutBanner__logo">
+                    <img class="aboutBanner__logoImg" src="./assets/img/logo.svg" alt="Логотип">
+                </div>
+                <h2 class="aboutBanner__title">Цифровое будущего вашего<br> бизнеса уже сегодня </h2>
+                <a class="aboutBanner__link btn btn--secondary" href="#">Получить консультацию</a>
+            </div>
+            <img class="aboutBanner__bannerImg" src="./assets/img/about-banner.png" alt="Изображение баннера">
+        </div>
+    </div>
+</section>
+
+<section class="section companyCareer">
+    <div class="section__inner">
+        <div class="section__header">
+            <h2 class="baseTitle baseTitle--second">
+                <span data-animation="fadeInRight" #dataAnim>Карьера в компании </span>
+            </h2>
+        </div>
+        <div class="section__body simpleTextSection__body">
+            <p class="simpleTextSection__text">
+                ООО «Формула Би Ай» - сплоченная команда системных аналитиков и разработчиков на технологической платформе Sherp. 
+                Наши специалисты имеют многолетний и уникальный опыт проектирования, разработки и внедрения корпоративных информационных экосистем, 
+                для  государственных и коммерческих организаций.              
+            </p>
+        </div>
+        <div class="companyCareer__cards">
+            <div class="aboutCard">
+                <div class="aboutCard__imgCover">
+                    <img class="aboutCard__img" src="./assets/img/about/about-icon-1.svg" alt="Изображение профессионалов">
+                </div>
+                <h3 class="aboutCard__title">Профессионалам</h3>
+                <div class="aboutCard__content">
+                    <ul class="baseList">
+                        <li>Формат работы: мы – за удаленную работу, но иногда бывает необходимость встретиться в офисе или посетить Заказчика. 
+                            Обязательным условием является пребывание на связи в течение рабочего дня.</li>
+                        <li>Зарплата определяется по итогам собеседования, исходя из Ваших компетенций и опыта. 
+                            Вы даете результат – мы достойную, конкурентную оплату.</li>
+                        <li>Дружный профессиональный коллектив.</li>
+                        <li>Официальное трудоустройство по ТК РФ.</li>
+                        <li>Система дополнительного материального поощрения, разработанная индивидуально для каждого сотрудника компании.</li>
+                        <li>Реальные перспективы профессионального и карьерного развития.</li>
+                        <li>Мы обеспечим Вас интересными задачами и проектами.</li>
+                    </ul>
+                </div>
+                <div class="aboutCard__footer">
+                    <a class="btn btn--outlined" href="#">Смотреть вакансии</a>
+                </div>
+            </div>
+
+            <div class="aboutCard">
+                <div class="aboutCard__imgCover">
+                    <img class="aboutCard__img" src="./assets/img/about/about-icon-2.svg" alt="Изображение начинающим">
+                </div>
+                <h3 class="aboutCard__title">Начинающим</h3>
+                <div class="aboutCard__content">
+                    <p>
+                        Мы можем предложить достойную работу как опытным профессионалам, так и выпускникам, студентам последних курсов, только начинающим свою карьеру в профессии!
+                        <br><br>
+                        Если вы учитесь в ВУЗе или недавно закончили обучение и задумались, в каком направлении применить полученные знания в 
+                        IT-области, предлагаем присоединиться к нашей команде и развивать ваши компетенции в направлении создания прикладного 
+                        программного обеспечения корпоративных информационных систем.
+                        <br><br>
+                        Приглашаем вас бесплатно пройти обучение и приобрести дополнительные знания и навыки в качестве разработчика корпоративных информационных систем на программно-технологической платформе «ШЕРП»
+                    </p>
+                </div>
+                <div class="aboutCard__footer">
+                    <a class="btn btn--outlined" href="#">Пройти практику</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section features">
+    <div class="section__inner">
+        <div class="features__cards">
+            <app-features [cardsData]="aboutFeaturesCardData"></app-features>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,94 @@
+<section class="section section--underHeader simpleTextSection">
+    <div class="section__inner">
+        <div class="section__header">
+            <h1 class="baseTitle baseTitle--first">
+                <span data-animation="fadeInRight" #dataAnim>Клиентам</span>
+            </h1>
+        </div>
+        <div class="section__body simpleTextSection__body">
+            <p class="simpleTextSection__text">
+                Наши клиенты уверены в успехе проектов. Первый реализованный проект – начало
+                партнерских отношений. Мы всегда «в контакте» с клиентами, делимся опытом, предлагаем нестандартные идеи и решения. 
+                С нами спокойно, нас рекомендуют друзьям и партнерам              
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section__inner">
+        <div class="aboutBanner aboutBanner--clients">
+            <div class="aboutBanner__content">
+                <h2 class="aboutBanner__title">Консультации эксперта</h2>
+                <p class="aboutBanner__text">Хотите задать вопрос экспертам, поучаствовать в  бесплатном вебинаре или получить дополнительную информацию? Оставьте заявку и мы обязательно ответим вам. </p>
+                <a class="aboutBanner__link btn btn--secondary">Получить консультацию</a>
+            </div>
+            <img class="aboutBanner__bannerImg" src="./assets/img/clients-banner.png" alt="Изображение баннера">
+        </div>
+    </div>
+</section>
+
+<section class="section techSupport">
+    <div class="section__inner">
+        <div class="section__header">
+            <h2 class="baseTitle baseTitle--second">
+                <span data-animation="fadeInRight" #dataAnim>Техподдержка</span>
+            </h2>
+        </div>
+        <div class="section__body simpleTextSection__body">
+            <p class="simpleTextSection__text">
+                Данный раздел предназначен для регистрации обращений пользователей по вопросам сопровождения информационных систем, 
+                а также получения информации о зарегистрированных обращениях.             
+            </p>
+        </div>
+        <div class="techSupport__cards">
+            <div class="baseCard baseCard--info">
+                <div class="baseCard__content">
+                    <div class="baseCard__icon">
+                        <svg class="baseCard__iconSvg"><use xlink:href="./assets/sprites/sprite.svg#techSupport-1"></use></svg>
+                    </div>
+                    <h3 class="baseCard__title">Консультирование пользователей по вопросам эксплуатации информационных систем</h3>
+                </div>
+            </div>
+            <div class="baseCard baseCard--info">
+                <div class="baseCard__content">
+                    <div class="baseCard__icon">
+                        <svg class="baseCard__iconSvg"><use xlink:href="./assets/sprites/sprite.svg#techSupport-2"></use></svg>
+                    </div>
+                    <h3 class="baseCard__title">Оперативное устранение неполадок в функционировании информационных систем</h3>
+                </div>
+            </div>
+            <div class="baseCard baseCard--info">
+                <div class="baseCard__content">
+                    <div class="baseCard__icon">
+                        <svg class="baseCard__iconSvg"><use xlink:href="./assets/sprites/sprite.svg#techSupport-3"></use></svg>
+                    </div>
+                    <h3 class="baseCard__title">Обновление информационных систем при внесении изменений в законодательство Российской Федерации и при выходе новых релизов.</h3>
+                </div>
+            </div>
+            <div class="baseCard baseCard--info">
+                <div class="baseCard__content">
+                    <div class="baseCard__icon">
+                        <svg class="baseCard__iconSvg"><use xlink:href="./assets/sprites/sprite.svg#techSupport-4"></use></svg>
+                    </div>
+                    <h3 class="baseCard__title">Улучшение</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="techSupport__btn">
+            <button class="btn btn--primary" (click)="modalService.show(modalService.modalNames.TECH_SUPPORT)">Обратиться в техподдержку</button>
+        </div>
+
+        <div class="techSupport__textContent">
+            <p>
+                Специалисты компании «Формула Би Ай» могут работать, используя терминальный доступ или осуществлять работы на территории Заказчика.
+                <br><br>
+                «Формула Би Ай» как правило, заключает со своими Клиентами Соглашение об уровне обслуживания (SLA, Service Level Agreements).
+            </p>
+
+            <a class="techSupport__textContentLink" href="tel: +7 (495) 252-12-47">+7 (495) 252-12-47</a>
+            <p class="techSupport__textContentShort">Служба поддержки обеспечивает регистрацию обращений на обслуживание системы по рабочим дням с 09:00 до 21:00 МСК.</p>
+        </div>
+    </div>
+</section>

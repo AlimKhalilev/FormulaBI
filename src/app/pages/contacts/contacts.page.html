@@ -1,0 +1,37 @@
+<section class="section section--underHeader simpleTextSection contacts">
+    <div class="section__inner">
+        <div class="section__header">
+            <h1 class="baseTitle baseTitle--first">
+                <span data-animation="fadeInRight" #dataAnim>Контакты</span>
+            </h1>
+        </div>
+        <div class="section__body simpleTextSection__body">
+            <p class="simpleTextSection__text">
+                Если Вы заинтересованы в наших услугах или у Вас есть вопросы, пожалуйста, 
+                воспользуйтесь удобными для Вас контактами, чтобы связаться с нами. 
+                Любое Ваше обращение будет рассмотрено в кратчайшие сроки.                
+            </p>
+        </div>
+
+        <div class="contacts__info">
+            <div class="contacts__row">
+                <h4 class="contacts__rowTitle">Юридический адрес</h4>
+                <span class="contacts__rowAddress">123290, Москва, 1-й Магистральный тупик, д. 5А, 3 этаж / БЦ «Магистраль Плаза»</span>
+                <a href="tel: +7 (495) 252-12-46" class="contacts__rowNumber">+7 (495) 252-12-46</a>
+                <a href="tel: +7 (495) 252-12-47" class="contacts__rowNumber">+7 (495) 252-12-47 <span>(служба технической поддержки)</span></a>
+            </div>
+            <div class="contacts__row">
+                <h4 class="contacts__rowTitle">Дополнительный офис</h4>
+                <span class="contacts__rowAddress">123290, Москва, 1-й Магистральный тупик, д. 11, стр. 10, 2 этаж / БЦ «Ярд»</span>
+            </div>
+        </div>
+
+        <div class="contacts__map">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A60275128e7912c4d12713d1344ce01d5524535b81cb4984f110a38fba3bf0be5&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+        </div>
+
+        <div class="contacts__btn">
+            <button class="btn btn--primary" (click)="modalService.show(modalService.modalNames.WRITE_MESSAGE)">Написать сообщение</button>
+        </div>
+    </div>
+</section>

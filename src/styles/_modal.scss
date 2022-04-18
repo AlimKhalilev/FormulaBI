@@ -1,0 +1,194 @@
+// === Modal ===
+
+.modal {
+    position: fixed;
+    top: -999px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease-in-out;
+    z-index: 21;
+
+    background-color: $color_white;
+    box-shadow: $shadow_gray;
+    width: 630px;
+
+    &--short {
+        width: 434px;
+    }
+
+    &.visible {
+        top: 50%;
+    }
+
+    @media ($media_sm) {
+        padding: 1.5rem;
+    }
+
+    @media ($media_xs) {
+        width: 90%;
+    }
+
+    // .modal__body
+
+    &__body {
+
+    }
+
+    // .modal__header
+
+    &__header {
+        position: relative;
+        margin: 32px 40px 20px 40px;
+        display: flex;
+        align-items: center;
+
+        @media ($media_sm) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    // .modal__title
+
+    &__title {
+        color: $color_dark;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    // .modal__close
+
+    &__close {
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    // .modal__closeIcon
+
+    &__closeIcon {
+        height: 24px;
+        width: 24px;
+        fill: $color_grey_icon;
+    }
+
+    // .modal__content
+
+    &__content {
+        padding: 0 40px 40px;
+        max-height: 80vh;
+        overflow-y: auto;
+
+        &--full {
+            overflow-y: initial;
+        }
+
+        @media ($media_sm) {
+            max-height: 70vh;
+        }
+    }
+
+    // .modal__form
+
+    &__form {
+        margin-top: 32px;
+    }
+
+    // .modal__text
+
+    &__text {
+        line-height: 24px;
+        color: $color_dark;
+    }
+
+    // .modal__btn
+
+    &__btn {
+
+    }
+
+    // .modal__links
+
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 24px;
+    }
+
+    // .modal__link
+
+    &__link {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: $color_red;
+        padding: 0;
+        border: none;
+        background-color: unset;
+        @include cursorPointer;
+
+        // .modal__link--secondary
+
+        &--secondary {
+            color: $color_grey_head;
+        }
+    }
+
+    // .modal__btn
+
+    &__btn {
+
+    }
+
+    // .modal__footer
+
+    &__footer {
+        margin-top: 28px;
+        display: flex;
+
+        .modal__footerText {
+            margin-top: 0;
+        }
+    }
+
+    // .modal__footerText
+
+    &__footerText {
+        margin-top: 12px;
+        font-size: 12px;
+        line-height: 20px;
+
+        a {
+            color: $color_red;
+            text-decoration: none;
+        }
+    }
+
+
+    // .modal__checkCircle
+
+    &__checkCircle {
+        text-align: center;
+        margin-top: -40px;
+        margin-bottom: 10px;
+
+        svg {
+            width: 96px;
+            height: 96px;
+            fill: $color_grey_extra_light;
+        }
+    }
+
+    // .modal__message
+
+    &__message {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        color: $color_dark;
+        text-align: center;
+    }
+
+}
+
+// === / Modal

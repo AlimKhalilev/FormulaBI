@@ -1,0 +1,38 @@
+.link {
+    $color_link: $color_dark;
+    text-decoration: none;
+    color: $color_link;
+    font-weight: 600;
+
+    display: inline-flex;
+    align-items: center;
+    @include baseTransition;
+
+    &:visited {
+        color: invert($color_link, 20%);
+    }
+
+    &:hover, &:focus {
+        outline: none;
+        color: $color_red;
+
+        &::after {
+            transform: scaleX(100%);
+        }
+    }
+
+    // .link__icon
+
+    &__icon {
+        fill: $color_red;
+        margin-left: 8px;
+        width: 24px;
+        height: 24px;
+    }
+
+    // .link__text
+
+    &__text {
+
+    }
+}

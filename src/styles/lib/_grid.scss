@@ -1,0 +1,34 @@
+$screen_base_container: 1140px; // **** Сюда вписываем свою ширину контейнера с дизайна ****
+$screen_md_container: 92%; // planshet
+$screen_sm_container: 90%; // mobile-reverse
+$screen_xs_container: 90%; // mobile
+
+$screen_md: 1280px; // planshet
+$screen_sm: 780px; // mobile-reverse
+$screen_xs: 440px; // mobile
+
+//  ТОЧЕЧНЫЙ АДАПТИВ (ПРОМЕЖУТОЧНЫЙ)  \\
+
+$media_not_md: "min-width: " + ($screen_md); // все размеры кроме моб
+$media_md: "max-width: " + $screen_md;
+$media_sm: "max-width: " + $screen_sm;
+$media_xs: "max-width: " + $screen_xs;
+
+//  АДАПТИВ БЕЗ ПРОМЕЖУТКОВ  \\
+
+.section__inner {
+    margin: 0 auto;
+    max-width: $screen_base_container;
+
+    @media ($media_md) {
+        width: $screen_md_container;
+    }
+
+    @media ($media_sm) {
+        width: $screen_sm_container;
+    }
+
+    @media ($media_xs) {
+        width: $screen_xs_container;
+    }
+}

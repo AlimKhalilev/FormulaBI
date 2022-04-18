@@ -1,0 +1,28 @@
+<div class="modal__body">
+    <div class="modal__header">
+        <h2 class="modal__title">Написать сообщение</h2>
+        <div class="modal__close" (click)="modalService.close()">
+            <svg class="modal__closeIcon">
+                <use xlink:href="./assets/sprites/sprite.svg#close"></use>
+            </svg>
+        </div>
+    </div>
+    <div class="modal__content">
+        <p class="modal__text">
+            Хотите задать вопрос экспертам, поучаствовать в бесплатном вебинаре или получить дополнительную информацию?
+            <br> 
+            Оставьте заявку и мы обязательно ответим вам. 
+        </p>
+        <field-group [formGroupData]="formService.writeMessageFormGroupData" [formGroup]="formService.writeMessageForm"></field-group>
+        <div class="modal__footer">
+            <p class="modal__footerText">
+                Нажимая на кнопку, я даю свое согласие на обработку моих персональных данных и соглашаюсь с 
+                <a href="#">правовой информацией</a>
+            </p>
+            <div class="modal__btn">
+                <button class="btn btn--short btn--primary" [disabled]="!formService.writeMessageForm.valid" (click)="formService.writeMessageFormSubmit(); modalService.show(modalService.modalNames.SUCCESS)">Отправить</button>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<header class="section header">
+    <div class="header__top">
+        <div class="section__inner header__inner">
+            <div class="allSites">
+                <input class="allSites__input visually-hidden" id="allSitesToggler" type="checkbox">
+
+                <label class="allSites__header" for="allSitesToggler">
+                    <svg class="allSites__icon">
+                        <use xlink:href="./assets/sprites/sprite.svg#burger"></use>
+                    </svg>
+                    <span class="allSites__title">Все сайты</span>
+                </label>
+
+                <div class="allSites__box">
+                    <a class="allSites__link" href="#">
+                        <img src="./assets/img/logo_blue.svg" alt="Логотип">
+                    </a>
+                    <a class="allSites__link" href="#">
+                        <img src="./assets/img/logo_yellow.svg" alt="Логотип">
+                    </a>
+                </div>
+            </div>
+
+            <nav>
+                <ul class="header__menu menu menu--secondary">
+                    <li class="menu__item"><a class="menu__link" [routerLink]="['/contacts']" routerDirection="root" [routerLinkActive]="['active']">Контакты</a></li>
+                    <li class="menu__item"><a class="menu__link menu__link--btn" [routerLink]="['/clients']" routerDirection="root" [routerLinkActive]="['active']">Клиентам</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="header__bottom">
+
+        <div class="section__inner header__inner">
+            <div class="overlay overlay--burger" [class.visible]="appService.burgerMenuOpened" (click)="onBurgerClick()"></div>
+
+            <div class="header__logo">
+    
+                <a class="logo" [routerLink]="['/home']" routerDirection="root">
+                    <img class="logo__icon imgMax" src="./assets/img/logo.svg" alt="Логотип">
+                </a>
+    
+                <div class="burger">
+                    <input class="burger__checkbox" type="checkbox" (change)="onBurgerClick()" [checked]="appService.burgerMenuOpened">
+                    <span class="burger__item burger__item--1"></span>
+                    <span class="burger__item burger__item--2"></span>
+                    <span class="burger__item burger__item--3"></span>
+                </div>
+                
+            </div>
+    
+            <div class="header__controls" [class.visible]="appService.burgerMenuOpened">
+                <nav class="header__links">
+                    <ul class="header__menu menu">
+                        <li class="menu__item"><a class="menu__link" [routerLink]="['/solutions']" routerDirection="root" [routerLinkActive]="['active']">Решения</a></li>
+                        <li class="menu__item"><a class="menu__link" [routerLink]="['/demo']" routerDirection="root" [routerLinkActive]="['active']">Центры знаний</a></li>
+                        <li class="menu__item"><a class="menu__link" [routerLink]="['/demo']" routerDirection="root" [routerLinkActive]="['active']">Технологии</a></li>
+                        <li class="menu__item"><a class="menu__link" [routerLink]="['media', appService.mediaPageId]" routerDirection="root" [routerLinkActive]="['active']">Медиа</a></li>
+                        <li class="menu__item"><a class="menu__link" [routerLink]="['/about']" routerDirection="root" [routerLinkActive]="['active']">О компании</a></li>
+                        <li class="menu__item menu__item--desktopHidden"><a class="btn btn--primary" [routerLink]="['/demo']" routerDirection="root" [routerLinkActive]="['active']">Клиентам</a></li>
+                    </ul>
+                </nav>
+                
+            </div>
+        </div>
+
+    </div>
+
+</header>
